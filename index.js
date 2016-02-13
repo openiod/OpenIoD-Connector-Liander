@@ -15,10 +15,10 @@ var sys 	= require('sys');
 var energieLevLocalPath ;
 var fileLocation;
 
-//var energieLeverancier = 'liander';
-//var energieLevFilename = 'LianderGeoVerbruik'
-var energieLeverancier = 'enexis';
-var energieLevFilename = 'EnexisGeoVerbruik';
+var energieLeverancier = 'liander';
+var energieLevFilename = 'LianderGeoVerbruik'
+//var energieLeverancier = 'enexis';
+//var energieLevFilename = 'EnexisGeoVerbruik';
 
 
 module.exports = {
