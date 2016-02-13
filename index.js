@@ -14,8 +14,10 @@ var sys 	= require('sys');
 
 var energieLevLocalPath ;
 
-var energieLeverancier = 'liander';
-var energieLevFilename = 'LianderGeoVerbruik'
+//var energieLeverancier = 'liander';
+//var energieLevFilename = 'LianderGeoVerbruik'
+var energieLeverancier = 'enexis';
+var energieLevFilename = 'EnexisGeoVerbruik';
 
 
 module.exports = {
@@ -44,7 +46,7 @@ module.exports = {
 		console.log('Year: ' + param.year);
 		console.log('systemFolderParent: ' + param.systemFolderParent);
 		
-		lianderLocalPath	= param.systemFolderParent + '/../data/' + energieLeverancier +'/';
+		energieLevLocalPath	= param.systemFolderParent + '/../data/' + energieLeverancier +'/';
 		
 		if (featureOfInterest == energieLeverancier) {
 			callback(findLocalLiander(param.product));
@@ -69,11 +71,11 @@ var findLocalLiander = function (productSoort) {
 		var _energieLevVerbruikFileOut = JSON.stringify(_energieLevVerbruikFileObject);
 	} 
 	catch (err) {
-		_lianderFile = err;
+		_energieLevFile = err;
   		// If the type is not what you want, then just throw the error again.
   		//if (err.code !== 'ENOENT') throw e;		
 		// Handle a file-not-found error
 	}
 
-  return _lianderFile;
+  return _energieLevFile;
 }
