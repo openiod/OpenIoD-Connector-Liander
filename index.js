@@ -19,8 +19,10 @@ var fileLocation;
 //var energieLevFilename = 'LianderGeoVerbruik'
 //var energieLeverancier = 'enexis';
 //var energieLevFilename = 'EnexisGeoVerbruik';
-var energieLeverancier = 'endinet';
-var energieLevFilename = 'EndinetGeoVerbruik'
+//var energieLeverancier = 'endinet';
+//var energieLevFilename = 'EndinetGeoVerbruik'
+var energieLeverancier = 'stedin';
+var energieLevFilename = 'StedinGeoVerbruik'
 
 
 module.exports = {
