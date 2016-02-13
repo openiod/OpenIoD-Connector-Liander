@@ -12,7 +12,7 @@ var fs 		= require('fs');
 var request = require('request');
 var sys 	= require('sys');
 
-var lianderLocalPath 			= systemFolderParent+'/liander/';
+var lianderLocalPath ;
 
 
 module.exports = {
@@ -36,6 +36,7 @@ module.exports = {
 */
 	getData: function (featureOfInterest, param, callback) {
 		//openIodConnector_ILM_MongoAggregation.getData(featureOfInterest, param, callback);
+		lianderLocalPath	= param.systemFolderParent+'/data/liander/';
 		
 		if (featureOfInterest == 'liander') {
 			callback(findLocalLiander(param.productSoort));
