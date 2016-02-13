@@ -1,5 +1,5 @@
 /**
- * OpenIoD module for connecting Liander data 
+ * OpenIoD module for connecting energieLev data 
  *
  * @param  {String} ##todo 
  * @return {String}
@@ -12,7 +12,10 @@ var fs 		= require('fs');
 var request = require('request');
 var sys 	= require('sys');
 
-var lianderLocalPath ;
+var energieLevLocalPath ;
+
+var energieLeverancier = 'liander';
+var energieLevFilename = 'LianderGeoVerbruik'
 
 
 module.exports = {
@@ -41,9 +44,9 @@ module.exports = {
 		console.log('Year: ' + param.year);
 		console.log('systemFolderParent: ' + param.systemFolderParent);
 		
-		lianderLocalPath	= param.systemFolderParent + '/../data/liander/';
+		lianderLocalPath	= param.systemFolderParent + '/../data/' + energieLeverancier +'/';
 		
-		if (featureOfInterest == 'liander') {
+		if (featureOfInterest == energieLeverancier) {
 			callback(findLocalLiander(param.product));
 			return;
 		}
@@ -57,13 +60,13 @@ module.exports = {
 
 
 var findLocalLiander = function (productSoort) {
-  	var _lianderFile;
-	var _lianderVerbruikFileObject;
-	var _lianderVerbruikFileOut;
+  	var _energieLevFile;
+	var _energieLevVerbruikFileObject;
+	var _energieLevVerbruikFileOut;
 	try {
-  		_lianderFile = fs.readFileSync(lianderLocalPath + 'LianderGeoVerbruik-' + productSoort + '-pc9-2016.json');
-		var _lianderVerbruikFileObject = JSON.parse(_lianderFile);
-		var _lianderVerbruikFileOut = JSON.stringify(_lianderVerbruikFileObject);
+  		_energieLevFile = fs.readFileSync(energieLevLocalPath + energieLevFilename + '-' + productSoort + '-pc9-2016.json');
+		var _energieLevVerbruikFileObject = JSON.parse(_energieLevFile);
+		var _energieLevVerbruikFileOut = JSON.stringify(_energieLevVerbruikFileObject);
 	} 
 	catch (err) {
 		_lianderFile = err;
