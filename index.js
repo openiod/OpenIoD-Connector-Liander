@@ -36,6 +36,8 @@ module.exports = {
 */
 	getData: function (featureOfInterest, param, callback) {
 		//openIodConnector_ILM_MongoAggregation.getData(featureOfInterest, param, callback);
+		console.log('Feature of interest: ' + featureOfInterest);
+		
 		lianderLocalPath	= param.systemFolderParent+'/data/liander/';
 		
 		if (featureOfInterest == 'liander') {
@@ -43,6 +45,7 @@ module.exports = {
 			return;
 		}
 		
+		console.log('ERROR: File not found!');
 		callback('File not found');
 		
 	},
