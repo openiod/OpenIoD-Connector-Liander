@@ -37,13 +37,13 @@ module.exports = {
 	getData: function (featureOfInterest, param, callback) {
 		//openIodConnector_ILM_MongoAggregation.getData(featureOfInterest, param, callback);
 		console.log('Feature of interest: ' + featureOfInterest);
-		console.log('Product: ' + param.productSoort);
+		console.log('Product: ' + param.product);
 		console.log('Year: ' + param.year);
 		
 		lianderLocalPath	= param.systemFolderParent+'/data/liander/';
 		
 		if (featureOfInterest == 'liander') {
-			callback(findLocalLiander(param.productSoort));
+			callback(findLocalLiander(param.product));
 			return;
 		}
 		
