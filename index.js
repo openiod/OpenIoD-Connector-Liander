@@ -37,6 +37,7 @@ module.exports = {
 	getData: function (featureOfInterest, param, callback) {
 		//openIodConnector_ILM_MongoAggregation.getData(featureOfInterest, param, callback);
 		console.log('Feature of interest: ' + featureOfInterest);
+		console.log('Product: ' + param.productSoort);
 		
 		lianderLocalPath	= param.systemFolderParent+'/data/liander/';
 		
@@ -63,6 +64,7 @@ var findLocalLiander = function (productSoort) {
 		var _lianderVerbruikFileOut = JSON.stringify(_lianderVerbruikFileObject);
 	} 
 	catch (err) {
+		_lianderFile = err;
   		// If the type is not what you want, then just throw the error again.
   		//if (err.code !== 'ENOENT') throw e;		
 		// Handle a file-not-found error
