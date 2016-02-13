@@ -48,7 +48,7 @@ module.exports = {
 		console.log('systemFolderParent: ' + param.systemFolderParent);
 		
 		energieLevLocalPath	= param.systemFolderParent + '/../data/' + energieLeverancier +'/';
-		fileLocation = energieLevLocalPath + energieLevFilename + '-' + product + '-pc9-2016.json';
+		fileLocation = energieLevLocalPath + energieLevFilename + '-' + param.product + '-pc9-2016.json';
 		
 		if (featureOfInterest == energieLeverancier) {
 			callback(findLocalLiander(param.product,fileLocation));
