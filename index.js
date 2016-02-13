@@ -65,8 +65,11 @@ var findLocalLiander = function (productSoort) {
   	var _energieLevFile;
 	var _energieLevVerbruikFileObject;
 	var _energieLevVerbruikFileOut;
+	var _fileName = energieLevLocalPath + energieLevFilename + '-' + productSoort + '-pc9-2016.json';
+	console.log('Filename: ' + _fileName);
 	try {
-  		_energieLevFile = fs.readFileSync(energieLevLocalPath + energieLevFilename + '-' + productSoort + '-pc9-2016.json');
+	
+  		_energieLevFile = fs.readFileSync(_fileName);
 		var _energieLevVerbruikFileObject = JSON.parse(_energieLevFile);
 		var _energieLevVerbruikFileOut = JSON.stringify(_energieLevVerbruikFileObject);
 	} 
