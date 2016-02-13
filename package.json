@@ -1,0 +1,19 @@
+{
+  "name": "OpenIoD-Connector-Liander",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openiod/OpenIoD-Connector-Liander.git"
+  },
+  "author": "André van der Wiel <awiel@scapeler.com> (http://scapeler.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/openiod/OpenIoD-Connector-Liander/issues"
+  },
+  "homepage": "https://github.com/openiod/OpenIoD-Connector-Liander"
+}
