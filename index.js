@@ -41,7 +41,7 @@ module.exports = {
 		console.log('Year: ' + param.year);
 		console.log('systemFolderParent: ' + param.systemFolderParent);
 		
-		lianderLocalPath	= param.systemFolderParent + '/data/liander/';
+		lianderLocalPath	= param.systemFolderParent + '/../data/liander/';
 		
 		if (featureOfInterest == 'liander') {
 			callback(findLocalLiander(param.product));
@@ -61,7 +61,7 @@ var findLocalLiander = function (productSoort) {
 	var _lianderVerbruikFileObject;
 	var _lianderVerbruikFileOut;
 	try {
-  		_lianderFile = fs.readFileSync(lianderLocalPath + 'LianderGeoVerbruik-' + productSoort + '.json');
+  		_lianderFile = fs.readFileSync(lianderLocalPath + 'tmp-LianderGeoVerbruik-' + productSoort + '.json');
 		var _lianderVerbruikFileObject = JSON.parse(_lianderFile);
 		var _lianderVerbruikFileOut = JSON.stringify(_lianderVerbruikFileObject);
 	} 
