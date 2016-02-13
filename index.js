@@ -39,6 +39,7 @@ module.exports = {
 		console.log('Feature of interest: ' + featureOfInterest);
 		console.log('Product: ' + param.product);
 		console.log('Year: ' + param.year);
+		console.log('systemFolderParent: ' + param.systemFolderParent);
 		
 		lianderLocalPath	= param.systemFolderParent + '/data/liander/';
 		
