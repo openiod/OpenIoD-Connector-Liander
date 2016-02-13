@@ -13,6 +13,7 @@ var request = require('request');
 var sys 	= require('sys');
 
 var energieLevLocalPath ;
+var fileLocation;
 
 //var energieLeverancier = 'liander';
 //var energieLevFilename = 'LianderGeoVerbruik'
@@ -47,6 +48,7 @@ module.exports = {
 		console.log('systemFolderParent: ' + param.systemFolderParent);
 		
 		energieLevLocalPath	= param.systemFolderParent + '/../data/' + energieLeverancier +'/';
+		fileLocation = energieLevLocalPath + this.energieLevFilename + '-' + productSoort + '-pc9-2016.json';
 		
 		if (featureOfInterest == energieLeverancier) {
 			callback(findLocalLiander(param.product));
@@ -61,15 +63,15 @@ module.exports = {
 };
 
 
-var findLocalLiander = function (productSoort) {
+var findLocalLiander = function (productSoort, fileLocation) {
   	var _energieLevFile;
 	var _energieLevVerbruikFileObject;
 	var _energieLevVerbruikFileOut;
-	var _fileName = energieLevLocalPath + energieLevFilename + '-' + productSoort + '-pc9-2016.json';
+	
 	console.log('Filename: ' + _fileName);
 	try {
 	
-  		_energieLevFile = fs.readFileSync(_fileName);
+  		_energieLevFile = fs.readFileSync(fileLocation);
 		var _energieLevVerbruikFileObject = JSON.parse(_energieLevFile);
 		var _energieLevVerbruikFileOut = JSON.stringify(_energieLevVerbruikFileObject);
 	} 
