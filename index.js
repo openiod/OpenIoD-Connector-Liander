@@ -38,6 +38,7 @@ module.exports = {
 		//openIodConnector_ILM_MongoAggregation.getData(featureOfInterest, param, callback);
 		console.log('Feature of interest: ' + featureOfInterest);
 		console.log('Product: ' + param.productSoort);
+		console.log('Year: ' + param.year);
 		
 		lianderLocalPath	= param.systemFolderParent+'/data/liander/';
 		
