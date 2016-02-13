@@ -40,7 +40,7 @@ module.exports = {
 		console.log('Product: ' + param.product);
 		console.log('Year: ' + param.year);
 		
-		lianderLocalPath	= param.systemFolderParent+'/data/liander/';
+		lianderLocalPath	= param.systemFolderParent + '/data/liander/';
 		
 		if (featureOfInterest == 'liander') {
 			callback(findLocalLiander(param.product));
