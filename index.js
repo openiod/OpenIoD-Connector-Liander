@@ -61,7 +61,7 @@ var findLocalLiander = function (productSoort) {
 	var _lianderVerbruikFileObject;
 	var _lianderVerbruikFileOut;
 	try {
-  		_lianderFile = fs.readFileSync(lianderLocalPath + 'LianderGeoVerbruik-' + productSoort + '.json');
+  		_lianderFile = fs.readFileSync(lianderLocalPath + 'LianderGeoVerbruik-' + productSoort + '-pc9-2016.json');
 		var _lianderVerbruikFileObject = JSON.parse(_lianderFile);
 		var _lianderVerbruikFileOut = JSON.stringify(_lianderVerbruikFileObject);
 	} 
