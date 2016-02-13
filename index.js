@@ -68,7 +68,7 @@ var findLocalLiander = function (product, fileLocation) {
 	var _energieLevVerbruikFileObject;
 	var _energieLevVerbruikFileOut;
 	
-	console.log('Filename: ' + _fileName);
+	console.log('File locatione: ' + fileLocation);
 	try {
 	
   		_energieLevFile = fs.readFileSync(fileLocation);
