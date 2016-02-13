@@ -1,4 +1,3 @@
-
 /**
  * OpenIoD module for connecting Liander data 
  *
